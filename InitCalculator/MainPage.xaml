@@ -12,13 +12,82 @@
         </Grid.RowDefinitions>
 
         <Label Text="0"
-               x:Name="Result1" FontSize="36"
+               x:Name="Result" FontSize="36"
                BackgroundColor="Black" FontAttributes="Bold"
-               TextColor="White" Grid.Row="0" />
-        <Label Text="7"
+               TextColor="White"
+               Grid.Row="0" Grid.Column="0"
+               Grid.ColumnSpan="4" Grid.RowSpan="2"/>
+        <Button Text="7"
                Grid.Row="1" Grid.Column="0"
-               FontSize="6" TextColor="Black"
+               FontSize="36" TextColor="Black"
+               Background="Orange"
+               Clicked="NumberClicked"/>
+         <Button Text="8"
+               Grid.Row="1" Grid.Column="1"
+               FontSize="36" TextColor="Black"
+               Background="Orange" Clicked="NumberClicked"/>
+         <Button Text="9"
+               Grid.Row="1" Grid.Column="2"
+               FontSize="36" TextColor="Black"
+               Background="Orange" Clicked="NumberClicked"/>
+        <Button Text="4"
+               Grid.Row="2" Grid.Column="0"
+               FontSize="36" TextColor="Black"
+               Background="Orange" Clicked="NumberClicked"/>
+         <Button Text="5"
+               Grid.Row="2" Grid.Column="1"
+               FontSize="36" TextColor="Black"
+               Background="Orange" Clicked="NumberClicked"/>
+         <Button Text="6"
+               Grid.Row="2" Grid.Column="2"
+               FontSize="36" TextColor="Black"
+               Background="Orange" Clicked="NumberClicked"/>
+        <Button Text="3"
+               Grid.Row="3" Grid.Column="0"
+               FontSize="36" TextColor="Black"
+               Background="Orange" Clicked="NumberClicked"/>
+         <Button Text="2"
+               Grid.Row="3" Grid.Column="1"
+               FontSize="36" TextColor="Black"
+               Background="Orange" Clicked="NumberClicked"/>
+         <Button Text="1"
+               Grid.Row="3" Grid.Column="2"
+               FontSize="36" TextColor="Black"
+               Background="Orange" Clicked="NumberClicked"/>
+        <Button Text="0"
+               Grid.Row="4" Grid.Column="0"
+               FontSize="36" TextColor="Black"
+               Background="Orange" Grid.ColumnSpan="3"
+                Clicked="NumberClicked"/>
+         <Button Text="/"
+               Grid.Row="1" Grid.Column="3"
+               FontSize="36" TextColor="Black"
                Background="Orange"/>
+         <Button Text="x"
+               Grid.Row="2" Grid.Column="3"
+               FontSize="36" TextColor="Black"
+               Background="Orange"/>
+         <Button Text="+"
+               Grid.Row="3" Grid.Column="3"
+               FontSize="36" TextColor="Black"
+               Background="Orange"/>
+        <Button Text="-"
+               Grid.Row="4" Grid.Column="3"
+               FontSize="36" TextColor="Black"
+               Background="Orange"/>
+        <Button Text="+"
+               Grid.Row="3" Grid.Column="3"
+               FontSize="36" TextColor="Black"
+               Background="Orange"/>
+        <Button Text="AC"
+               Grid.Row="5" Grid.Column="0"
+               FontSize="36" TextColor="Black"
+               Background="Orange" Grid.ColumnSpan="2"
+               Clicked="OnClear" />
+        <Button Text="="
+               Grid.Row="5" Grid.Column="2"
+               FontSize="36" TextColor="Black"
+               Background="Orange" Grid.ColumnSpan="2"/>
     </Grid>
 
 </ContentPage>

@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="InitCalculator.MainPage">
 
-    <Grid>
+    <Grid BackgroundColor="Black">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
@@ -12,82 +12,85 @@
         </Grid.RowDefinitions>
 
         <Label Text="0"
-               x:Name="Result" FontSize="36"
+               x:Name="Result1" FontSize="36"
                BackgroundColor="Black" FontAttributes="Bold"
                TextColor="White"
                Grid.Row="0" Grid.Column="0"
-               Grid.ColumnSpan="4" Grid.RowSpan="2"/>
-        <Button Text="7"
+               Grid.ColumnSpan="4" />
+         <Label Text="0"
+               x:Name="Result2" FontSize="36"
+               BackgroundColor="Black" FontAttributes="Bold"
+               TextColor="White"
                Grid.Row="1" Grid.Column="0"
+               Grid.ColumnSpan="4" />
+        <Button Text="7"
+               Grid.Row="2" Grid.Column="0"
                FontSize="36" TextColor="Black"
                Background="Orange"
                Clicked="NumberClicked"/>
          <Button Text="8"
-               Grid.Row="1" Grid.Column="1"
-               FontSize="36" TextColor="Black"
-               Background="Orange" Clicked="NumberClicked"/>
-         <Button Text="9"
-               Grid.Row="1" Grid.Column="2"
-               FontSize="36" TextColor="Black"
-               Background="Orange" Clicked="NumberClicked"/>
-        <Button Text="4"
-               Grid.Row="2" Grid.Column="0"
-               FontSize="36" TextColor="Black"
-               Background="Orange" Clicked="NumberClicked"/>
-         <Button Text="5"
                Grid.Row="2" Grid.Column="1"
                FontSize="36" TextColor="Black"
                Background="Orange" Clicked="NumberClicked"/>
-         <Button Text="6"
+         <Button Text="9"
                Grid.Row="2" Grid.Column="2"
                FontSize="36" TextColor="Black"
                Background="Orange" Clicked="NumberClicked"/>
-        <Button Text="3"
+        <Button Text="4"
                Grid.Row="3" Grid.Column="0"
                FontSize="36" TextColor="Black"
                Background="Orange" Clicked="NumberClicked"/>
-         <Button Text="2"
+         <Button Text="5"
                Grid.Row="3" Grid.Column="1"
                FontSize="36" TextColor="Black"
                Background="Orange" Clicked="NumberClicked"/>
-         <Button Text="1"
+         <Button Text="6"
                Grid.Row="3" Grid.Column="2"
                FontSize="36" TextColor="Black"
                Background="Orange" Clicked="NumberClicked"/>
-        <Button Text="0"
+        <Button Text="3"
                Grid.Row="4" Grid.Column="0"
+               FontSize="36" TextColor="Black"
+               Background="Orange" Clicked="NumberClicked"/>
+         <Button Text="2"
+               Grid.Row="4" Grid.Column="1"
+               FontSize="36" TextColor="Black"
+               Background="Orange" Clicked="NumberClicked"/>
+         <Button Text="1"
+               Grid.Row="4" Grid.Column="2"
+               FontSize="36" TextColor="Black"
+               Background="Orange" Clicked="NumberClicked"/>
+        <Button Text="0"
+               Grid.Row="5" Grid.Column="0"
                FontSize="36" TextColor="Black"
                Background="Orange" Grid.ColumnSpan="3"
                 Clicked="NumberClicked"/>
          <Button Text="/"
-               Grid.Row="1" Grid.Column="3"
-               FontSize="36" TextColor="Black"
-               Background="Orange"/>
-         <Button Text="x"
                Grid.Row="2" Grid.Column="3"
                FontSize="36" TextColor="Black"
-               Background="Orange"/>
-         <Button Text="+"
+               Background="Orange" Clicked="OnOperatorClick"/>
+         <Button Text="x"
                Grid.Row="3" Grid.Column="3"
                FontSize="36" TextColor="Black"
-               Background="Orange"/>
-        <Button Text="-"
+               Background="Orange" Clicked="OnOperatorClick"/>
+         <Button Text="+"
                Grid.Row="4" Grid.Column="3"
                FontSize="36" TextColor="Black"
-               Background="Orange"/>
-        <Button Text="+"
-               Grid.Row="3" Grid.Column="3"
+               Background="Orange" Clicked="OnOperatorClick"/>
+        <Button Text="-"
+               Grid.Row="5" Grid.Column="3"
                FontSize="36" TextColor="Black"
-               Background="Orange"/>
+               Background="Orange" Clicked="OnOperatorClick"/>
         <Button Text="AC"
-               Grid.Row="5" Grid.Column="0"
+               Grid.Row="6" Grid.Column="0"
                FontSize="36" TextColor="Black"
                Background="Orange" Grid.ColumnSpan="2"
                Clicked="OnClear" />
         <Button Text="="
-               Grid.Row="5" Grid.Column="2"
+               Grid.Row="6" Grid.Column="2"
                FontSize="36" TextColor="Black"
-               Background="Orange" Grid.ColumnSpan="2"/>
+               Background="Orange" Grid.ColumnSpan="2"
+               Clicked="OnEqualClick"/>
     </Grid>
 
 </ContentPage>

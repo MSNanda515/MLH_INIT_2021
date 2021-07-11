@@ -56,10 +56,25 @@ class _MyHomePageState extends State<MyHomePage> {
               "Your Reminders are:",
               style: TextStyle(fontSize: 30),
             ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headline4,
-            ),
+            Card(
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: <Widget>[
+                  ListTile(
+                    title: Text('The Enchanted Nightingale'),
+                    subtitle: Text('Music by Julie'),
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: <Widget>[
+                      TextButton(onPressed: () {}, child: Text('Buy Tickets')),
+                      SizedBox(width: 8),
+                      TextButton(onPressed: () {}, child: Text("Listen"))
+                    ],
+                  )
+                ],
+              ),
+            )
           ],
         ),
       ),

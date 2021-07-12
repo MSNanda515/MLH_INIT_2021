@@ -30,10 +30,9 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
   var reminders = [
-    {
-      "name": "Reminder 1",
-      "date": "7 June 2021",
-    }
+    {"name": "Reminder 1", "date": "7 June 2021", "time": "21:00"},
+    {"name": "Reminder 2", "date": "8 June 2021", "time": "21:00"},
+    {"name": "Reminder 3", "date": "9 June 2021", "time": "21:00"},
   ];
 
   void _incrementCounter() {
@@ -56,25 +55,35 @@ class _MyHomePageState extends State<MyHomePage> {
               "Your Reminders are:",
               style: TextStyle(fontSize: 30),
             ),
-            Card(
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                children: <Widget>[
-                  ListTile(
-                    title: Text('The Enchanted Nightingale'),
-                    subtitle: Text('Music by Julie'),
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: <Widget>[
-                      TextButton(onPressed: () {}, child: Text('Buy Tickets')),
-                      SizedBox(width: 8),
-                      TextButton(onPressed: () {}, child: Text("Listen"))
-                    ],
-                  )
-                ],
-              ),
-            )
+            Column(
+                children: reminders
+                    .map(
+                      (reminder) => Card(
+                        child: Column(
+                          mainAxisSize: MainAxisSize.min,
+                          children: <Widget>[
+                            ListTile(
+                              title: Text(reminder["name"] ?? ''),
+                              subtitle: Text((reminder["date"] ?? "") +
+                                  " " +
+                                  (reminder["time"] ?? '')),
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              children: <Widget>[
+                                IconButton(
+                                    onPressed: () {}, icon: Icon(Icons.check)),
+                                SizedBox(width: 8),
+                                IconButton(
+                                    onPressed: () {}, icon: Icon(Icons.delete))
+                              ],
+                            ),
+                            SizedBox(height: 10),
+                          ],
+                        ),
+                      ),
+                    )
+                    .toList()),
           ],
         ),
       ),

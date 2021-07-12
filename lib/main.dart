@@ -60,6 +60,7 @@ class _MyHomePageState extends State<MyHomePage> {
               "Your Reminders are:",
               style: TextStyle(fontSize: 30),
             ),
+<<<<<<< HEAD
             Column(
                 children: reminders
                     .map(
@@ -89,6 +90,12 @@ class _MyHomePageState extends State<MyHomePage> {
                       ),
                     )
                     .toList()),
+=======
+            Text(
+              '$_counter',
+              style: Theme.of(context).textTheme.headline4,
+            ),
+>>>>>>> parent of c244efc (Working on UI)
           ],
         ),
       ),

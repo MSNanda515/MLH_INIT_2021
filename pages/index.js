@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Iterinary from '../components/iterinary'
 
 export default function Home() {
   return (
@@ -13,6 +14,9 @@ export default function Home() {
           Welcome to MLP 
         </h1>
 
+        <div class="iterinary">
+          <Iterinary iterinary={{}} />
+        </div>
        
       </main>
 

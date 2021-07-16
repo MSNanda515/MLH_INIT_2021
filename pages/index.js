@@ -1,5 +1,7 @@
 import Head from 'next/head'
 import Iterinary from '../components/iterinary'
+import {iterinary} from "../data/iterinary.json";
+
 
 export default function Home() {
   return (
@@ -14,8 +16,8 @@ export default function Home() {
           Welcome to MLP 
         </h1>
 
-        <div class="iterinary">
-          <Iterinary iterinary={{}} />
+        <div className="iterinary">
+          <Iterinary iterinary={iterinary} />
         </div>
        
       </main>
@@ -31,6 +33,12 @@ export default function Home() {
       </footer>
 
       <style jsx>{`
+
+        .iterinary {
+          width: 100%;
+          align-items: center;
+          justify-content: center;
+        }
         .container {
           min-height: 100vh;
           padding: 0 0.5rem;
